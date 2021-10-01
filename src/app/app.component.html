@@ -1,0 +1,18 @@
+<!-- <router-outlet></router-outlet> -->
+<div class="wrapper">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Enter string</mat-label>
+        <textarea matInput placeholder="Enter string" [(ngModel)]="inputData.inputString" name="inputString"></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Enter Secret</mat-label>
+        <input matInput placeholder="Enter Secret" [(ngModel)]="inputData.secret" name="secret">
+    </mat-form-field>
+    <button mat-raised-button color="primary" style="margin-right: 10px;" (click)="encryptData()">Encrypt</button>
+    <button mat-raised-button color="primary" style="margin-bottom: 10px;" (click)="decryptData()">Decrypt</button>
+    
+    <mat-form-field class="example-full-width" appearance="fill" >
+        <mat-label>Output</mat-label>
+        <textarea matInput readonly [value]="output"></textarea>
+    </mat-form-field>
+</div>
